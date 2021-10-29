@@ -20,13 +20,14 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* NAVBAR STYLE */
 
 nav{
     background-color: #fff;
-    height: 4.8rem;
+    height: 80px;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
@@ -59,41 +60,45 @@ nav .indicator{
     position: absolute;
     bottom: 0;
     transition: 3.s ease-in-out all;
-    transform: translate(-500px);
+    /*transform: translate(-500px);*/
 }
 /* PROVISIONAL STYLE SECTIONS */
 #one{
- background-color: rgb(240, 225, 96);
- width: 50%;
- height: 400px;
- margin:auto;
+    background-color: rgb(240, 225, 96);
+    width: 50%;
+    height: 600px;
+    margin:auto;
+    margin-bottom: 20px;
 }
 
 #two{
     background-color: rgb(255, 195, 127);
     width: 50%;
-    height: 400px;
+    height: 600px;
     margin:auto; 
+    margin-bottom: 20px;
 }
 
 #three{
     background-color: rgb(137, 209, 123);
     width: 50%;
-    height: 400px;
+    height: 600px;
     margin:auto; 
+    margin-bottom: 20px;
 }
 
 #four{
     background-color: rgb(138, 163, 216);
     width: 50%;
-    height: 400px;
+    height: 600px;
     margin:auto;
+    margin-bottom: 20px;
 }
 
 #five{
     background-color: rgb(104, 100, 100);
     width: 50%;
-    height: 400px;
+    height: 600px;
     margin:auto;
 }
 
