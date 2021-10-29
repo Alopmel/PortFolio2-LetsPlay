@@ -1,9 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 body{
     font-family: Arial;
 }
 
+html{
+    scroll-behavior: smooth;  /*menu transaction to sections*/
+}
 
+/* HEADER STYLE */
 
+.header{
+    background-color: rgb(226, 183, 215);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* PROVISIONAL STYLE SECTIONS */
 #one{
