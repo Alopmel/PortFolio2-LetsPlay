@@ -1,3 +1,42 @@
 body{
     font-family: Arial;
 }
+
+
+
+
+/* PROVISIONAL STYLE SECTIONS */
+#one{
+ background-color: rgb(240, 225, 96);
+ width: 50%;
+ height: 400px;
+ margin:auto;
+}
+
+#two{
+    background-color: rgb(255, 195, 127);
+    width: 50%;
+    height: 400px;
+    margin:auto; 
+}
+
+#three{
+    background-color: rgb(137, 209, 123);
+    width: 50%;
+    height: 400px;
+    margin:auto; 
+}
+
+#four{
+    background-color: rgb(138, 163, 216);
+    width: 50%;
+    height: 400px;
+    margin:auto;
+}
+
+#five{
+    background-color: rgb(104, 100, 100);
+    width: 50%;
+    height: 400px;
+    margin:auto;
+}
