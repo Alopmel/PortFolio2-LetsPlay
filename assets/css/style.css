@@ -62,15 +62,61 @@ nav .indicator{
     transition: 3.s ease-in-out all;
     /*transform: translate(-500px);*/
 }
-/* PROVISIONAL STYLE SECTIONS */
-#one{
-    background-color: rgb(240, 225, 96);
-    width: 50%;
-    height: 600px;
-    margin:auto;
-    margin-bottom: 20px;
+
+/* SNAKE GAME STYLE */
+
+#board, .boardInfo{
+    max-width: 500px;
 }
 
+#board{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#start, .boardInfo{
+    font-size: 25px;
+}
+
+#gameOver{
+    display:none;
+}
+
+.boardInfo{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#start{
+    background-color: #f35a69;
+    border: none;
+    color: #fff;
+}
+
+#scoreBoard{
+    display: inline-flex;
+}
+
+.square{
+    aspect-ratio: 1;
+}
+
+.emptySquare{
+    background-color: #456990;
+}
+
+.snakeSquare{
+    background-color: #ccf47f;
+}
+
+.foodSquare{
+   background-color: #f35a69; 
+}
+/* PROVISIONAL STYLE SECTIONS */
+#one{
+    height: 800px;
+}
 #two{
     background-color: rgb(255, 195, 127);
     width: 50%;
