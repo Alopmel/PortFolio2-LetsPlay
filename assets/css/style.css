@@ -32,7 +32,7 @@ nav{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     position:fixed;
-    top: 0; /* required */
+    top: 90vh; /* required */
     overflow: hidden;
 }
 
@@ -64,9 +64,13 @@ nav .indicator{
 }
 
 /* SNAKE GAME STYLE */
+#snake{
+    margin: auto;
+}
 
 #board, .boardInfo{
     max-width: 500px;
+    margin: auto;
 }
 
 #board{
@@ -113,38 +117,51 @@ nav .indicator{
 .foodSquare{
    background-color: #f35a69; 
 }
-/* PROVISIONAL STYLE SECTIONS */
-#one{
-    height: 800px;
-}
-#two{
-    background-color: rgb(255, 195, 127);
-    width: 50%;
-    height: 600px;
-    margin:auto; 
-    margin-bottom: 20px;
+
+/* FLAPPY BIRD STYLE */
+
+#flappyGame{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
 }
 
-#three{
-    background-color: rgb(137, 209, 123);
-    width: 50%;
-    height: 600px;
-    margin:auto; 
-    margin-bottom: 20px;
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: #000;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
 }
 
-#four{
-    background-color: rgb(138, 163, 216);
-    width: 50%;
-    height: 600px;
-    margin:auto;
-    margin-bottom: 20px;
+@keyframes block {
+    0%{left: 400px}
+    100%{left: -500px}
 }
 
-#five{
-    background-color: rgb(104, 100, 100);
-    width: 50%;
-    height: 600px;
-    margin:auto;
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: #fff;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: #f35a69;
+    position: absolute;
+    top: 892px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#flappyGame{
+    margin: auto;
 }
 
