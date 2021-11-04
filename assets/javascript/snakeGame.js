@@ -147,10 +147,9 @@ const setGame = () => {
     emptySquares = [];
     createBoard();
 }
+setGame();
 
-
-const startGame = () => {
-    setGame();
+const startGame = () => {    
     gameOverSign.style.display = 'none';
     startButtom.disabled = true;
     drawSnake();

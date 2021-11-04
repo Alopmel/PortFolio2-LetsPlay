@@ -11,11 +11,124 @@ body{
 html{
     scroll-behavior: smooth;  /*menu transaction to sections*/
 }
+/* BACKHROUND HEADER STYLE */
+.header-index{
+  width: 100%;
+  min-height: 100vh;
+  background: #000;  
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
 
-/* HEADER STYLE */
+.glowing{
+  position: relative;
+  min-width: 750px;
+  height: 750px;
+  margin: -150px;
+  transform-origin: right ;
+  z-index: 3;
+  animation: colorChange 8s linear infinite;
+}
 
-.header{
+.glowing:nth-chil(even){
+    transform-origin: left;
+}
+
+@keyframes colorChange {
+    0%
+    {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+    
+}
+.glowing span{
+   position: absolute; 
+   top: calc(80px * var(--i));
+   left: calc(80px * var(--i));
+   bottom: calc(80px * var(--i));
+   right: calc(80px * var(--i));
+}
+
+.glowing span:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1):before{
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0,1),
+                0 0 40px rgba(134, 255, 0,1),
+                0 0 80px rgba(134, 255, 0,1),
+                0 0 120px rgba(134, 255, 0,1),
+                0 0 0 2px rgba(134, 255, 0,.1);
+}
+
+.glowing span:nth-child(3n + 2):before{
+    background: rgba(255, 215, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1),
+                0 0 40px rgba(255, 215, 0, 1),
+                0 0 80px rgba(255, 215, 0, 1),
+                0 0 120px rgba(255, 215, 0, 1),
+                0 0 0 2px rgba(255, 215, 0, .1);
+}
+
+.glowing span:nth-child(3n + 3):before{
+    background: rgba(0, 266, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 266, 255, 1),
+                0 0 40px rgba(0, 266, 255, 1),
+                0 0 80px rgba(0, 266, 255, 1),
+                0 0 120px rgba(0, 266, 255, 1),
+                0 0 0 2px rgba(0, 266, 255, 1);
+}
+
+.glowing span:nth-child(3n + 1){
+    animation: animate 10s alternate infinite;
+}
+.glowing span:nth-child(3n + 2){
+    animation: animate-reverse 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3){
+    animation: animate 8s alternate infinite;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-reverse{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* LETTER HEADER STYLE */
+.letter-header{
     min-height:100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,14 +136,15 @@ html{
     background: #000;
     overflow: hidden;
 }
-
 .box{
-    position: relative;
-    width: 600px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Yep! */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box h2{
@@ -43,8 +157,23 @@ html{
                  0 0 40px #00b3ff,
                  0 0 80px #00b3ff,
                  0 0 120px #00b3ff;
+    animation: colorChangeBox 8s linear infinite;
 }
 
+@keyframes colorChangeBox {
+    0%
+    {
+        filter: hue-rotate(0deg);
+       
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+        
+    }
+    
+}
+/*
 .lightbar{
     position: absolute;
     top: 0;
@@ -124,8 +253,7 @@ html{
     {
         transform: translateX(0%); 
     }
-}
-
+}*/
 /* NAVBAR STYLE */
 
 nav{
@@ -137,6 +265,7 @@ nav{
     position:fixed;
     top: 90vh; /* required */
     overflow: hidden;
+    z-index: 4;
 }
 
 nav a{
@@ -224,13 +353,22 @@ nav .indicator{
 /* FLAPPY BIRD STYLE */
 
 #flappyGame{
-    width: 400px;
+    width: 500px;
     height: 500px;
     border: 1px solid black;
     overflow: hidden;
 }
 
 #block{
+    width: 50px;
+    height: 500px;
+    background-color: #000;
+    position: relative;
+    left: 500px;
+   /* animation: block 2s infinite linear;*/
+}
+
+.block-start{
     width: 50px;
     height: 500px;
     background-color: #000;
@@ -251,15 +389,25 @@ nav .indicator{
     position: relative;
     left: 400px;
     top: -500px;
+}
+
+.hole-start{
+    width: 50px;
+    height: 150px;
+    background-color: #fff;
+    position: relative;
+    left: 400px;
+    top: -500px;
     animation: block 2s infinite linear;
 }
+
 
 #character{
     width: 20px;
     height: 20px;
     background-color: #f35a69;
     position: absolute;
-    top: 892px;
+   /* top: 100px;*/
     border-radius: 50%;
     overflow: hidden;
 }
@@ -268,16 +416,12 @@ nav .indicator{
     margin: auto;
 }
 
-
 /* SPACE INVADERS STYLE */
-.results{
-    text-align: center;
-}
+
 .grid{
     width: 300px;
     height: 300px;
     border: solid #000 1px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -286,7 +430,6 @@ nav .indicator{
     width: 20px;
     height: 20px;
 }
-
 
 .invader{
    background-color: rgb(99, 6, 99); 
@@ -309,4 +452,10 @@ nav .indicator{
     background-color: #fff;
  }
 
+/* STYLE 2 SNAKE */
 
+#board-grid{
+    display: grid;
+    grid-template-columns: repeat(15, 25px);
+    grid-template-rows: repeat(15, 25px);
+}
