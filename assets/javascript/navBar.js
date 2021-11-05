@@ -1,4 +1,4 @@
-// HTML Elements
+/* HTML Elements
 const board = document.getElementById('board');
 const scoreBoard = document.getElementById('scoreBoard');
 const startButtom = document.getElementById('start');
@@ -161,3 +161,4 @@ const startGame = () => {
 
 startButtom.addEventListener('click', startGame);
 
+*/

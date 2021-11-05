@@ -256,8 +256,8 @@ html{
 }*/
 /* NAVBAR STYLE */
 
+
 nav{
-    background-color: #fff;
     height: 80px;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -265,10 +265,12 @@ nav{
     position:fixed;
     top: 90vh; /* required */
     overflow: hidden;
-    z-index: 4;
+    z-index: 60;
+    background: #111;
 }
 
 nav a{
+    border: 2px solid #0f0;
     flex:1;
     height: 100%;
     text-transform: uppercase;
@@ -276,23 +278,92 @@ nav a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #000;
+    color: #fff;
     transition: .2s ease-in-out all;
-    font-weight: 500;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    transition-delay: 0s;
 }
 
 nav a:hover{
-    background-color: #f0f0f0;
+    transition-delay: 1.5s;
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0,
+                0 0 80px #0f0,
+                0 0 160px #0f0;
 }
 
-nav .indicator{
-    width: 0px;
-    height: 7px;
-    background-color: steelblue;
+span{
+    position: relative;
+    z-index: 100;
+}
+nav a:nth-child(1){
+    filter: hue-rotate(0deg)
+}
+nav a:nth-child(2){
+    filter: hue-rotate(60deg)
+}
+nav a:nth-child(3){
+    filter: hue-rotate(120deg)
+}
+nav a:nth-child(4){
+    filter: hue-rotate(240deg)
+}
+
+nav a::before{
+    content: '';
     position: absolute;
-    bottom: 0;
-    transition: 3.s ease-in-out all;
-    /*transform: translate(-500px);*/
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0,
+                5px  8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s ;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+nav a:hover::before{
+    width: 60%;
+    height: 100%; 
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0,
+                5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0,
+                -5px  8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s ;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+nav a:hover::after{
+    width: 60%;
+    height: 100%; 
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0,
+                -5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+
 }
 
 /* SNAKE GAME STYLE */
