@@ -31,7 +31,7 @@ html{
  animation: colorChange 8s linear infinite;
 }
 
-.glowing:nth-chil(even){
+.glowing:nth-child(even){
     transform-origin: left;
 }
 
@@ -86,12 +86,12 @@ html{
 }
 
 .glowing span:nth-child(3n + 3):before{
-    background: rgba(0, 266, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 266, 255, 1),
-                0 0 40px rgba(0, 266, 255, 1),
-                0 0 80px rgba(0, 266, 255, 1),
-                0 0 120px rgba(0, 266, 255, 1),
-                0 0 0 2px rgba(0, 266, 255, 1);
+    background: rgba(0, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1),
+                0 0 40px rgba(0, 255, 255, 1),
+                0 0 80px rgba(0, 255, 255, 1),
+                0 0 120px rgba(0, 255, 255, 1),
+                0 0 0 2px rgba(0, 255, 255, 1);
 }
 
 .glowing span:nth-child(3n + 1){
@@ -522,7 +522,7 @@ nav a:hover::after{
     border-radius: 8px;
     backdrop-filter: blur(10px);
     z-index: 1;
-    transform: 0.5s;
+    transition: 0.5s;
     color:  #fff;
 }
 
@@ -582,7 +582,7 @@ nav a:hover::after{
     text-align: center;
 }
 .square{
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
 }
 
 .emptySquare{
@@ -874,7 +874,7 @@ li:nth-child(3) span{
     from {
         color: #fff;
         text-shadow: 0 0 0px #00b6ff,
-                     0 0 -1px #00b6ff,
+                     0 0 0    #00b6ff,
                      0 0 10px #00b6ff,
                      0 0 20px #00b6ff,
                      0 0 90px #00b6ff;
@@ -884,7 +884,7 @@ li:nth-child(3) span{
     {
         color: lightgrey;
         text-shadow: 0 0 0px #00b6ff,
-                     0 0 10px #00b6ff,
+                     0 0 0 #00b6ff,
                      0 0 20px #00b6ff,
                      0 0 90px #00b6ff;
     }
@@ -954,7 +954,7 @@ button:hover{
     from {
         color: #fff;
         text-shadow: 0 0 0px #ff0000,
-                     0 0 -1px #ff0000,
+                     0 0 0    #ff0000,
                      0 0 10px #ff0000,
                      0 0 20px #ff0000,
                      0 0 90px #ff0000;
@@ -964,7 +964,7 @@ button:hover{
     {
         color: lightgrey;
         text-shadow: 0 0 0px #ff0000,
-                     0 0 10px #ff0000,
+                     0 0 0 #ff0000,
                      0 0 20px #ff0000,
                      0 0 90px #ff0000;
     }
@@ -975,7 +975,7 @@ button:hover{
     from {
         color: #fff;
         text-shadow: 0 0 0px #3cff00,
-                     0 0 -1px #3cff00,
+                     0 0 0 #3cff00,
                      0 0 10px #3cff00,
                      0 0 20px #3cff00,
                      0 0 90px #3cff00;
@@ -985,7 +985,7 @@ button:hover{
     {
         color: lightgrey;
         text-shadow: 0 0 0px #3cff00,
-                     0 0 10px #3cff00,
+                     0 0 0 #3cff00,
                      0 0 20px #3cff00,
                      0 0 90px #3cff00;
     }
