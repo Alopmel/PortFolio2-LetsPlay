@@ -262,6 +262,7 @@ nav{
     background: #111;
 }
 
+
 nav a{
     border: 2px solid #0f0;
     flex:1;
@@ -359,6 +360,53 @@ nav a:hover::after{
 
 }
 
+@media (max-width: 852px){
+    nav a{
+        border: 1px solid #0f0;
+        flex:1;
+        height: 100%;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem;
+        text-decoration: none;
+
+    }
+
+    nav a::before,
+    nav a::after{
+        display: none;
+    }
+
+    ul li{
+        font-size: 2rem;
+    }
+    #flappyGame{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        overflow: hidden;
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    
+    ul li{
+        font-size: 1rem;
+        margin: 0 37px;
+    }
+    #flappyGame{
+        width: 10px;
+        height: 10px;
+        border: 1px solid black;
+        overflow: hidden;
+        display: none;
+    }
+}
 /* SECTION CARDS STYLE */
 
 .body-section{
@@ -608,11 +656,12 @@ nav a:hover::after{
 /* FLAPPY BIRD STYLE */
 
 #flappyGame{
-    width: 500px;
-    height: 500px;
+    width: 22rem;
+    height: 29rem;
     border: 1px solid black;
     overflow: hidden;
     display: none;
+    margin:auto;
 }
 
 #block{
@@ -620,7 +669,8 @@ nav a:hover::after{
     height: 500px;
     background-color: #000;
     position: relative;
-    left: 500px;
+    left: 25rem;
+    overflow: hidden;
    /* animation: block 2s infinite linear;*/
 }
 
@@ -716,13 +766,13 @@ nav a:hover::after{
 
 /*FOOTER STYLE */
 footer{
-    min-height: 60vh;
+    min-height: 50vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #111;
-    z-index: 70;
+    z-index: 50;
 }
 
 footer ul{
@@ -902,7 +952,7 @@ li:nth-child(3) span{
     align-items: center;
 }
 
-button, .play-again{
+#start, #play-again{
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -918,7 +968,7 @@ button, .play-again{
 
 }
 
-button:hover{
+#start:hover{
     letter-spacing: 3px;
     background: #00b6ff;
     color: #111;

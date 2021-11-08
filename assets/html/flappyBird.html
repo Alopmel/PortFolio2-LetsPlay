@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en"   onclick="jump()">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="website with various platform games">
-    <meta name="Keywords" content="play, playgame, snake, flappy bird, ninja, pong">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Flappy Bird</title>
-</head><!DOCTYPE html>
 <html lang="en" onclick="jump()">
 <head>
     <meta charset="UTF-8">
@@ -34,16 +24,13 @@
                <h1 class="neon-text">Flappy Bird Game</h1>
                 <ul>
                     <li>
-                        Space invaders move vertically and horizontally towards the shooter.
+                        Your bird will gain height when you click
                     </li>
                     <li>
-                        Move the left and right arrows to move the shooter.
+                        You must go through the middle of the tubes
                     </li>
                     <li>
-                        Use the up arrow to shoot the space invaders.
-                    </li>
-                    <li>
-                        If they get to you, you've lost, so kill them all to win!
+                        If you hit one or the ground you lose
                     </li>
                 </ul>
 
@@ -79,26 +66,23 @@
         </div>        
     </section>  
     <script src="../javascript/flappyBird.js"></script>
-</body>
-</html>
-<body>
-    <header>
-        <nav id="menu">
-            <a href="../../index.html"> Home</a>
-            <a href="snake.html"> Snake</a>
-            <a href="flappyBird.html"> Flappy Bird</a>
-            <a href="spaceInvaders.html"> Space Invaders</a>
-            <a href="#five"> footer</a>
-            <span class="indicator" id="indicator"></span>
-        </nav>
-    </header>
-    <section class="section" id="two">
-        <div id="flappyGame">
-            <div id="block"></div>
-            <div id="hole"></div>
-            <div id="character"></div>
-        </div>
-    </section>  
-    <script src="../javascript/flappyBird.js"></script>
+    <script>
+        $(document).ready(function(){
+           $(".social-media").mouseenter(function(){
+                var box = $(this);
+                box.addClass('boxSkew');
+                setTimeout(function(){
+                    box.addClass('boxExpand');
+                }, 500)
+           })
+           $(".social-media").mouseleave(function(){
+            var box = $(this);
+                box.removeClass('boxExpand');
+                setTimeout(function(){
+                    box.removeClass('boxSkew');
+                }, 500)
+           })
+        });
+    </script>
 </body>
 </html>
