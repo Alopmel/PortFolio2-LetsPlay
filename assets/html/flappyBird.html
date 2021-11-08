@@ -8,7 +8,79 @@
     <meta name="Keywords" content="play, playgame, snake, flappy bird, ninja, pong">
     <link rel="stylesheet" href="../css/style.css">
     <title>Flappy Bird</title>
+</head><!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website with various platform games">
+    <meta name="Keywords" content="play, playgame, snake, flappy bird, ninja, pong">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Flappy Bird</title>
 </head>
+<body>
+    <header>
+        <nav id="menu">
+            <a href="index.html"> Home</a>
+            <a href="snake.html"> Snake</a>
+            <a href="flappyBird.html"> Flappy Bird</a>
+            <a href="spaceInvaders.html"> Space Invaders</a>
+        </nav>
+    </header>
+    <section class="section" id="two">
+        <div id="start-game">
+            <div class="container-snake">
+               <h1 class="neon-text">Flappy Bird Game</h1>
+                <ul>
+                    <li>
+                        Space invaders move vertically and horizontally towards the shooter.
+                    </li>
+                    <li>
+                        Move the left and right arrows to move the shooter.
+                    </li>
+                    <li>
+                        Use the up arrow to shoot the space invaders.
+                    </li>
+                    <li>
+                        If they get to you, you've lost, so kill them all to win!
+                    </li>
+                </ul>
+
+                <div class="btn-start">
+                    <button id="start">Start</button>                           
+                </div>            
+            </div>            
+        </div>
+        <div id="game-over">
+            <div class="container-snake-over">
+            <div>
+                <h1 class="neon-text-red">You Loose</h1>
+               <div>
+                Score: <div id="scoreBoard"></div>
+               </div>
+                <div class="btn-reset">
+                    <button id="play-again">Play Again!</button>                           
+                </div> 
+            </div>
+                          
+            </div>            
+        </div> 
+        
+        <div id="flappyGame">
+            <div id="block"></div>
+            <div id="hole"></div>
+            <div id="character"></div>
+        </div>
+        <div class="boardInfo">
+            <div id="score">
+                Score: <div id="totalScore"></div>
+            </div>
+        </div>        
+    </section>  
+    <script src="../javascript/flappyBird.js"></script>
+</body>
+</html>
 <body>
     <header>
         <nav id="menu">

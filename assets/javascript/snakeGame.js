@@ -1,8 +1,12 @@
 // HTML Elements
 const board = document.getElementById('board');
 const scoreBoard = document.getElementById('scoreBoard');
+const totalScore = document.getElementById('totalScore');
 const startButtom = document.getElementById('start');
-const gameOverSign = document.getElementById('gameOver');
+const resetButtom = document.getElementById('play-again');
+const gameBoard = document.getElementById('snake');
+const gameOverPage = document.getElementById('game-over');
+const playGamePage = document.getElementById('start-game');
 
 // Game settings
 const boardSize = 10;
@@ -24,7 +28,7 @@ const drawSnake = () => {
 }
 // Game variables
 let snake;
-let score;
+let score = 0;
 let direction;
 let boardSquares;
 let emptySquares;
@@ -106,9 +110,12 @@ const addFood = () => {
 // Create a game over function
 
 const gameOver = () => {
-    gameOverSign.style.display = 'block';
+    //gameOverSign.style.display = 'block';
     clearInterval(moveInterval) // we set the movement of the snake
-    startButtom.disabled = false; // we activate the start button again
+    startButtom.disabled = false;
+    gameBoard.style.display = 'none';
+    gameOverPage.style.display = 'block'; // we activate the start button again
+    updateScore();
 }
 // Create Ramdon Food
 
@@ -120,6 +127,7 @@ const createRandomFood = () => {
 
 const updateScore = () => {
     scoreBoard.innerText = score;
+    totalScore.innerText = score;
 }
 
 // Draw board
@@ -139,7 +147,7 @@ const createBoard = () => {
 
 const setGame = () => {
     snake = ['00', '01', '02', '03'];
-    score = snake.length; 
+    score = 1; 
     direction = 'ArrowRight';
     boardSquares = Array.from(Array(boardSize), () => new Array(boardSize).fill(squareTypes.emptySquare));
     console.log(boardSquares)
@@ -150,8 +158,12 @@ const setGame = () => {
 setGame();
 
 const startGame = () => {    
-    gameOverSign.style.display = 'none';
+    playGamePage.style.display = 'none';
+    gameOverPage.style.display = 'none';
+    gameBoard.style.display = 'block';
     startButtom.disabled = true;
+    console.log("start")
+    setGame();
     drawSnake();
     updateScore();
     createRandomFood();
@@ -160,4 +172,4 @@ const startGame = () => {
 }
 
 startButtom.addEventListener('click', startGame);
-
+resetButtom.addEventListener('click', startGame);

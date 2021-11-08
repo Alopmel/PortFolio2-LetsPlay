@@ -10,22 +10,63 @@
     <title>Space Invaders</title>
 </head>
 <body>
-    <header>
-        
+    <header>        
         <nav id="menu">
-            <a href="../../index.html"> Home</a>
+            <a href="index.html"> Home</a>
             <a href="snake.html"> Snake</a>
             <a href="flappyBird.html"> Flappy Bird</a>
             <a href="spaceInvaders.html"> Space Invaders</a>
-            <a href="#five"> footer</a>
-            <span class="indicator" id="indicator"></span>
         </nav>
-
     </header>
 
-    <section>
-        <h1 class="results">0</h1>
-        <div class="grid"></div>        
+    <section class="section" id="three">
+        <div id="start-game">
+            <div class="container-snake">
+               <h1 class="neon-text">Space Invaders Game</h1>
+                <ul>
+                    <li>
+                        Space invaders move vertically and horizontally towards the shooter.
+                    </li>
+                    <li>
+                        Move the left and right arrows to move the shooter.
+                    </li>
+                    <li>
+                        Use the up arrow to shoot the space invaders.
+                    </li>
+                    <li>
+                        If they get to you, you've lost, so kill them all to win!
+                    </li>
+                </ul>
+
+                <div class="btn-start">
+                    <button id="start">Start</button>                           
+                </div>            
+            </div>            
+        </div>
+        <div id="game-over">
+            <div class="container-snake-over">
+            <div>
+                <h1 id="text-reset"> " "</h1>
+               <div>
+                Score: <div id="scoreBoard"></div>
+               </div>
+                <div class="btn-reset">
+                    <button id="play-again">Play Again!</button>                           
+                </div> 
+            </div>
+                          
+            </div>            
+        </div>
+        <div id="invaders">
+            <div class="grid"></div>
+            <div class="boardInfo">
+                <div id="score">
+                    Score: <div id="totalScore"></div>
+                </div>
+            </div>
+        </div>
+        
+        
     </section>
     
     <script src="../javascript/spaceInvaders.js"></script>
