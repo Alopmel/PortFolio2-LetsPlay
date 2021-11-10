@@ -66,23 +66,5 @@
         </div>        
     </section>  
     <script src="../javascript/flappyBird.js"></script>
-    <script>
-        $(document).ready(function(){
-           $(".social-media").mouseenter(function(){
-                var box = $(this);
-                box.addClass('boxSkew');
-                setTimeout(function(){
-                    box.addClass('boxExpand');
-                }, 500)
-           })
-           $(".social-media").mouseleave(function(){
-            var box = $(this);
-                box.removeClass('boxExpand');
-                setTimeout(function(){
-                    box.removeClass('boxSkew');
-                }, 500)
-           })
-        });
-    </script>
 </body>
 </html>
