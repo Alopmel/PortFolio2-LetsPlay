@@ -71,11 +71,7 @@ const gravity = () =>{
       (cTop > holeTop+130)))){ 
         startButtom.disabled = false;
         gameOverPage.style.display = 'block';
-<<<<<<< HEAD
         character.style.display = 'none'
-=======
-        character.style.display = 'none';
->>>>>>> 22de4cfc70982a986fb42a322f104fcf2c6f3761
         hole.classList.remove('hole-start');
         block.classList.remove('block-start');
     }else{
