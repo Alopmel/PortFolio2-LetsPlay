@@ -1,4 +1,4 @@
-# LetsPlay
+# Let's Play
 
 Let's Play is a web page where you can find three different games. Snake, Flappy Bird and Space Invaders game.
 
