@@ -19,6 +19,7 @@ let characterTop;
 let jumping = 0;
 //const SetGame 
 const setGame = () => {
+character.style.display = "block";
 character.style.top = 100+"px";
 score = 1;
 }
@@ -70,6 +71,7 @@ const gravity = () =>{
       (cTop > holeTop+130)))){ 
         startButtom.disabled = false;
         gameOverPage.style.display = 'block';
+        character.style.display = 'none';
         hole.classList.remove('hole-start');
         block.classList.remove('block-start');
     }else{
